@@ -1,0 +1,34 @@
+{
+  "baseMaterials": {
+    "EMPTY": {"id":"EMPTY","name":"Empty","color":"#000000","solid":false,"density":0,"temp":20,"flammable":false},
+    "WALL": {"id":"WALL","name":"Wall","color":"#333333","solid":true,"density":10000,"temp":20,"flammable":false},
+    "SAND": {"id":"SAND","name":"Sand","color":"#c2b280","solid":false,"density":1600,"flow":true,"temp":20,"flammable":false},
+    "WATER": {"id":"WATER","name":"Water","color":"#3fb0ff","solid":false,"density":1000,"flow":true,"temp":20,"flammable":false,"evaporates":true},
+    "OIL": {"id":"OIL","name":"Oil","color":"#2d1f06","solid":false,"density":800,"flow":true,"temp":20,"flammable":true},
+    "FIRE": {"id":"FIRE","name":"Fire","color":"#ff6b35","solid":false,"density":1,"isGas":true,"temp":800,"lifetime":50},
+    "SMOKE": {"id":"SMOKE","name":"Smoke","color":"#666666","solid":false,"isGas":true,"density":0.6,"temp":120},
+    "STEAM": {"id":"STEAM","name":"Steam","color":"#e8f7ff","solid":false,"isGas":true,"density":0.7,"temp":120},
+    "STONE": {"id":"STONE","name":"Stone","color":"#9ea7a6","solid":true,"density":2600,"temp":20},
+    "WOOD": {"id":"WOOD","name":"Wood","color":"#8b5a2b","solid":true,"density":700,"flammable":true},
+    "ACID": {"id":"ACID","name":"Acid","color":"#7fffd4","solid":false,"density":1200,"corrosive":true,"temp":20},
+    "SALT": {"id":"SALT","name":"Salt","color":"#fff4e6","solid":false,"density":2160},
+    "ICE": {"id":"ICE","name":"Ice","color":"#dff3ff","solid":true,"density":917,"temp":-10},
+    "LAVA": {"id":"LAVA","name":"Lava","color":"#ff3100","solid":false,"density":2500,"temp":1200,"coolTo":"STONE"},
+    "METAL": {"id":"METAL","name":"Metal","color":"#b8b8c8","solid":true,"density":7800,"conductor":true,"temp":20},
+    "SEED": {"id":"SEED","name":"Seed","color":"#2f8800","solid":false,"density":200,"growable":true},
+    "GAS": {"id":"GAS","name":"Gas","color":"#b0b0b0","solid":false,"isGas":true,"density":0.9},
+    "FAN": {"id":"FAN","name":"Fan","color":"#b0e0e6","solid":true,"density":5000,"isTool":true},
+    "ERASER": {"id":"ERASER","name":"Eraser","color":"#000000","solid":false,"isTool":true}
+  },
+  "variants": {
+    "colored_sands": {"base":"SAND","count":40,"tintVariance":0.12},
+    "warm_waters": {"base":"WATER","count":8,"tempBias":[5,20,60,100]},
+    "oils": {"base":"OIL","count":6,"viscosity":[0.6,1.0,1.6]},
+    "decorative": {"base":"SALT","count":12,"tintVariance":0.18}
+  },
+  "presets": [
+    {"name":"Beach Pack","materials":["SAND","WATER","STONE","SALT"]},
+    {"name":"Volcanic","materials":["LAVA","STONE","METAL","SMOKE","FIRE"]},
+    {"name":"Biomes","materials":["SEED","WATER","SOIL","WOOD","ICE"]}
+  ]
+}
