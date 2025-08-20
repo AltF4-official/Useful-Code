@@ -1,0 +1,129 @@
+{
+  "meta":{"title":"Sand Saga Campaign","author":"AutoGen","version":"1.0"},
+  "levels": [
+    {
+      "id":"L001","title":"Tutorial — Place Sand","difficulty":"Tutorial","start":"empty",
+      "startMap":"(empty)","allowed":["SAND","WALL","ERASER"],"objectives":[{"type":"count","material":"SAND","min":200,"desc":"Place 200 sand particles anywhere."}],
+      "hints":["Use brush to place sand","Adjust brush size with [ ]"],"stars":{"time":60,"efficiency":0.5}
+    },
+    {
+      "id":"L002","title":"Water Basin","difficulty":"Tutorial","start":"bowl","allowed":["WATER","SAND","WALL","ERASER"],
+      "startMap":"bowl","objectives":[{"type":"fillRatio","material":"WATER","x1":20,"y1":220,"x2":380,"y2":260,"ratio":0.8,"desc":"Fill basin to 80% with water."}],
+      "hints":["Use water to fill the basin; sand can shape it."],"stars":{"time":120}
+    },
+    {
+      "id":"L003","title":"Extinguish Fire","difficulty":"Easy","startMap":"firepit","allowed":["WATER","STONE","WALL","ERASER"],
+      "objectives":[{"type":"extinguishAll","desc":"Extinguish all fire within 90s"}],
+      "hints":["Water reduces fire; stone blocks spread."],"stars":{"time":90}
+    },
+    {
+      "id":"L004","title":"Grow a Plant","difficulty":"Easy","startMap":"seedplot","allowed":["SEED","WATER","WALL","SAND","ERASER"],
+      "objectives":[{"type":"grow","material":"SEED","size":30,"desc":"Grow plant to 30 cells"}],
+      "hints":["Seeds require water and space to grow."],"stars":{"time":180}
+    },
+    {
+      "id":"L005","title":"Lava Channeling","difficulty":"Medium","startMap":"lavachannel","allowed":["LAVA","STONE","WALL","ERASER"],
+      "objectives":[{"type":"routeLava","desc":"Keep lava away from the village for 120s"}],
+      "hints":["Lava cools to stone when contacting cold elements."],"stars":{"time":300}
+    },
+    {
+      "id":"L006","title":"Oil Fire","difficulty":"Medium","startMap":"oilpool","allowed":["OIL","WATER","STONE","WALL","ERASER"],
+      "objectives":[{"type":"extinguishAll","desc":"Put out oil-fueled fires"}],
+      "hints":["Water and stone help; oil is flammable."],"stars":{"time":240}
+    },
+    {
+      "id":"L007","title":"Corrosion Test","difficulty":"Easy","startMap":"metalpipe","allowed":["ACID","WATER","STONE","WALL"],
+      "objectives":[{"type":"corrode","material":"METAL","amount":30,"desc":"Corrode 30 metal cells"}],
+      "hints":["Acid corrodes metal over time."],"stars":{"time":180}
+    },
+    {
+      "id":"L008","title":"Freeze the Lake","difficulty":"Medium","startMap":"lake","allowed":["ICE","WATER","WALL","ERASER"],
+      "objectives":[{"type":"freeze","material":"WATER","ratio":0.9,"desc":"Freeze 90% of the lake"}],
+      "hints":["Cold elements and ice spread freeze."],"stars":{"time":240}
+    },
+    {
+      "id":"L009","title":"Steam Power","difficulty":"Hard","startMap":"boiler","allowed":["WATER","FIRE","METAL","WALL"],
+      "objectives":[{"type":"generate","material":"STEAM","amount":150,"desc":"Generate 150 steam particles"}],
+      "hints":["Heat water to make steam; steam rises."],"stars":{"time":300}
+    },
+    {
+      "id":"L010","title":"Forge Metal","difficulty":"Hard","startMap":"forge","allowed":["METAL","FIRE","WATER","STONE","WALL"],
+      "objectives":[{"type":"heatcool","material":"METAL","temp":800,"desc":"Heat metal to forging temp then cool"}],
+      "hints":["Conduction and cooling are key."],"stars":{"time":400}
+    },
+    {
+      "id":"L011","title":"Seed Nursery","difficulty":"Tutorial","startMap":"nursery","allowed":["SEED","WATER","SAND","WOOD","ERASER"],
+      "objectives":[{"type":"grow","material":"SEED","size":60,"desc":"Grow multiple plants totalling 60 cells"}],
+      "hints":["Spread water and seeds."],"stars":{"time":360}
+    },
+    {
+      "id":"L012","title":"Reservoir Fill","difficulty":"Easy","startMap":"reservoir","allowed":["WATER","SAND","STONE","WALL"],
+      "objectives":[{"type":"fillRatio","material":"WATER","x1":40,"y1":160,"x2":360,"y2":260,"ratio":0.8,"desc":"Fill reservoir to 80%"}],
+      "hints":["Use sand to block leaks."],"stars":{"time":200}
+    },
+    {
+      "id":"L013","title":"Fan Maze","difficulty":"Medium","startMap":"fanmaze","allowed":["FAN","WALL","SAND","WATER","ERASER"],
+      "objectives":[{"type":"routeGas","material":"GAS","targetX":380,"targetY":40,"desc":"Direct gas to the target"}],
+      "hints":["Fans influence gas flow."],"stars":{"time":240}
+    },
+    {
+      "id":"L014","title":"Smoke Clearance","difficulty":"Easy","startMap":"housefire","allowed":["WATER","FAN","WALL","STONE"],
+      "objectives":[{"type":"clear","material":"SMOKE","desc":"Clear smoke from the house"}],
+      "hints":["Fans and ventilation help."],"stars":{"time":180}
+    },
+    {
+      "id":"L015","title":"Salt Reaction","difficulty":"Medium","startMap":"saltpond","allowed":["SALT","WATER","ACID","WALL"],
+      "objectives":[{"type":"react","materialA":"SALT","materialB":"ACID","amount":40,"desc":"Cause salt-acid reaction"}],
+      "hints":["Mixing triggers reaction."],"stars":{"time":240}
+    },
+    {
+      "id":"L016","title":"Ice Sculpting","difficulty":"Easy","startMap":"iceslab","allowed":["ICE","WATER","ERASER","WALL"],
+      "objectives":[{"type":"sculpt","material":"ICE","targetShape":"statue","desc":"Carve statue shape (approx)"}],
+      "hints":["Ice melts with heat."],"stars":{"time":300}
+    },
+    {
+      "id":"L017","title":"Volcanic Shield","difficulty":"Hard","startMap":"volcano","allowed":["STONE","WALL","LAVA","WATER"],
+      "objectives":[{"type":"protect","areaX1":10,"areaY1":10,"x2":100,"y2":60,"desc":"Shield town from lava for 400s"}],
+      "hints":["Stone barriers absorb lava."],"stars":{"time":600}
+    },
+    {
+      "id":"L018","title":"Oil Refinery Puzzle","difficulty":"Hard","startMap":"refinery","allowed":["OIL","FIRE","METAL","WALL","WATER"],
+      "objectives":[{"type":"process","material":"OIL","amount":200,"desc":"Process oil safely"}],
+      "hints":["Heat carefully; avoid leaks."],"stars":{"time":600}
+    },
+    {
+      "id":"L019","title":"Seed & Pollinate","difficulty":"Medium","startMap":"garden","allowed":["SEED","WATER","WIND","FAN","ERASER"],
+      "objectives":[{"type":"spread","material":"SEED","count":100,"desc":"Spread seeds across garden"}],
+      "hints":["Fans help distribute seeds."],"stars":{"time":360}
+    },
+    {
+      "id":"L020","title":"Conduction Bridge","difficulty":"Medium","startMap":"bridge","allowed":["METAL","STONE","WALL","FIRE"],
+      "objectives":[{"type":"conduct","material":"METAL","from":[20,200],"to":[380,200],"desc":"Transfer heat across metal bridge"}],
+      "hints":["Metal conducts heat quickly."],"stars":{"time":240}
+    },
+    {
+      "id":"L021","title":"Pressure Puzzle","difficulty":"Hard","startMap":"chamber","allowed":["WATER","GAS","FAN","WALL"],
+      "objectives":[{"type":"pressure","desc":"Reach pressure threshold in target chamber"}],
+      "hints":["Trapping gases raises pressure."],"stars":{"time":360}
+    },
+    {
+      "id":"L022","title":"Ash Cleanup","difficulty":"Easy","startMap":"ashfield","allowed":["WATER","SHOVEL","STONE","ERASER"],
+      "objectives":[{"type":"clear","material":"SMOKE","desc":"Remove ash and smoke"}],
+      "hints":["Water compacts ash."],"stars":{"time":200}
+    },
+    {
+      "id":"L023","title":"Seed Tower","difficulty":"Hard","startMap":"tower","allowed":["SEED","WATER","WOOD","WALL"],
+      "objectives":[{"type":"grow","material":"SEED","size":200,"desc":"Grow tall plant structure"}],
+      "hints":["Stack platforms and water regularly."],"stars":{"time":700}
+    },
+    {
+      "id":"L024","title":"Emergency Dam","difficulty":"Medium","startMap":"floodplain","allowed":["SAND","STONE","WALL","WATER"],
+      "objectives":[{"type":"stopFlood","desc":"Prevent flood from reaching village"}],
+      "hints":["Quick sand barriers work best."],"stars":{"time":300}
+    },
+    {
+      "id":"L025","title":"Masterpiece Finale","difficulty":"Very Hard","startMap":"blank","allowed":["ALL"],"objectives":[{"type":"creative","desc":"Use everything you learned to create a working system"}],
+      "hints":["Combine heat, flow and reactions."],"stars":{"time":1200}
+    }
+  ]
+}
