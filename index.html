@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Modal Popup (Single File)</title>
+  <title>Responsive Modal Popup (Single File) - Shield Badge</title>
 
   <!-- BOXICONS (kept external for the close icon) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -214,29 +214,45 @@
           <i class='bx bx-x'></i>
         </button>
 
-        <!-- Inline SVG (trophy with star). This replaces the raster image. -->
-        <svg class="modal__img" viewBox="0 0 200 200" role="img" aria-label="Star trophy" xmlns="http://www.w3.org/2000/svg">
-          <!-- Trophy cup -->
-          <g transform="translate(0,6)">
-            <path d="M50 42c0 23 8 36 19 42 3.5 2 6.5 4.8 8 8h36c1.5-3.2 4.6-6 8-8 11-6 19-19 19-42V20H50v22z" fill="url(#cupGrad)"/>
-            <!-- handles -->
-            <path d="M34 28c-8 4-12 13-12 18 0 7 6 10 12 12" stroke="rgba(0,0,0,0.12)" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M166 28c8 4 12 13 12 18 0 7-6 10-12 12" stroke="rgba(0,0,0,0.12)" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <!-- stem & base -->
-            <rect x="88" y="110" width="24" height="18" rx="3" fill="rgba(0,0,0,0.08)"/>
-            <rect x="68" y="128" width="64" height="10" rx="4" fill="rgba(0,0,0,0.06)"/>
-          </g>
+        <!-- Inline SVG: Shield badge with star + ribbon -->
+        <svg class="modal__img" viewBox="0 0 200 200" role="img" aria-label="Shield badge" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shadow behind the shield -->
+          <ellipse cx="100" cy="170" rx="48" ry="6" fill="rgba(0,0,0,0.06)"/>
 
-          <!-- star -->
-          <polygon points="100,45 110.4,74 142,74 116,92 126,121 100,100 74,121 84,92 58,74 89.6,74"
-                   fill="var(--accent-gold)" stroke="rgba(0,0,0,0.06)" stroke-width="1.5"/>
+          <!-- Shield shape -->
+          <path d="M100 18
+                   C135 18 170 40 170 78
+                   C170 115 140 140 100 166
+                   C60 140 30 115 30 78
+                   C30 40 65 18 100 18
+                   Z"
+                fill="url(#shieldGrad)" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
 
-          <!-- gradient definition -->
+          <!-- Inner accent rim -->
+          <path d="M100 30
+                   C130 30 158 48 158 78
+                   C158 108 132 130 100 152
+                   C68 130 42 108 42 78
+                   C42 48 70 30 100 30
+                   Z"
+                fill="rgba(255,255,255,0.03)"/>
+
+          <!-- Star centered on the shield -->
+          <polygon points="100,58 108.6,77.6 129.5,77.6 113.0,89.8 121.6,109.4 100,97 78.4,109.4 87.0,89.8 70.5,77.6 91.4,77.6"
+                   fill="var(--accent-gold)" stroke="rgba(0,0,0,0.06)" stroke-width="1.2"/>
+
+          <!-- Small ribbon tails -->
+          <path d="M60 132 L40 152 L60 152 L72 140 Z" fill="#e53935" transform="translate(0,4)"/>
+          <path d="M140 132 L160 152 L140 152 L128 140 Z" fill="#e53935" transform="translate(0,4)"/>
+
+          <!-- ribbon center under shield -->
+          <rect x="80" y="132" width="40" height="12" rx="6" fill="#b71c1c" transform="translate(0,6)"/>
+
           <defs>
-            <linearGradient id="cupGrad" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="hsl(45,80%,55%)"/>
-              <stop offset="60%" stop-color="hsl(40,90%,50%)"/>
-              <stop offset="100%" stop-color="var(--first-color)"/>
+            <linearGradient id="shieldGrad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#4e97ff"/>
+              <stop offset="60%" stop-color="#2b66f6"/>
+              <stop offset="100%" stop-color="#1b4ed8"/>
             </linearGradient>
           </defs>
         </svg>
